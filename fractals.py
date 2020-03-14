@@ -6,7 +6,7 @@ if os.name == 'posix':
     isPosix = True
 
 WORK_DIR = os.environ['PWD']
-DISPLAY_POSIX = ("display ")
+DISPLAY_POSIX = ("xdg-open ")
 DISPLAY_WIN = ("C:\\Windows\\System32>rundll32.exe")
 DICO_ARGS = {"b" : "/brocoli/",
              "m" : "/mandelbrot/",
@@ -43,8 +43,10 @@ def display(dict_args, argument, image_format):
 def condition_image(unix_like):
     if unix_like:
         dico = DICO_ARGS
+        disp = DISPLAY_POSIX
     else:
         dico = DICO_ARGS_WIN
+        disp = DISPLAY_WIN
     
     if barg == "b":
         display(dico, barg, farg)
