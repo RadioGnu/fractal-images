@@ -35,7 +35,7 @@ sarg = args.sponge
 varg = args.voltage
 farg = args.format
 
-def display(dict_args, argument, image_format):
+def display(dict_args, argument, image_format, display):
     """ """
     path = DISPLAY_POSIX + WORK_DIR + dict_args[argument]
     subprocess.call(path + "image." + image_format, shell=True)
@@ -49,13 +49,13 @@ def condition_image(unix_like):
         disp = DISPLAY_WIN
     
     if barg == "b":
-        display(dico, barg, farg)
+        display(dico, barg, farg, disp)
     if marg =="m":
-        display(dico, marg, farg)
+        display(dico, marg, farg, disp)
     if sarg == "s":
-        display(dico, sarg, farg)
+        display(dico, sarg, farg, disp)
     if varg == "v":
-        display(dico, varg, farg)
+        display(dico, varg, farg, disp)
 
 def condition_format(unix_like):
     if farg == "jpg":
