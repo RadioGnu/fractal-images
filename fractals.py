@@ -8,21 +8,21 @@ if os.name == 'posix':
 WORK_DIR = os.environ['PWD']
 DISPLAY_POSIX = ("xdg-open ")
 DISPLAY_WIN = ("C:\\Windows\\System32>rundll32.exe")
-DICO_ARGS = {"b" : "/brocoli/",
+DICO_ARGS = {"b" : "/broccoli/",
              "m" : "/mandelbrot/",
              "s" : "/sponge/",
              "v" : "/high-voltage/"}
-DICO_ARGS_WIN = {"b" : "\\brocoli\\",
+DICO_ARGS_WIN = {"b" : "\\broccoli\\",
              "m" : "\\mandelbrot\\",
              "s" : "\\sponge\\",
              "v" : "\\high-voltage\\"}
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-b", "--brocoli", help="shows an image of the brocoli set",
+parser.add_argument("-b", "--brocoli", help="shows an image of a romanesco broccoli",
                     action="store_const", const="b")
 parser.add_argument("-m", "--mandelbrot", help="shows an image of the mandelbrot set",
                     action="store_const", const="m")
-parser.add_argument("-s", "--sponge", help="shows an image of the menger's sponge",
+parser.add_argument("-s", "--sponge", help="shows an image of menger's sponge",
                     action="store_const", const="s")
 parser.add_argument("-v", "--voltage", help="shows an image of a fractal piece of glass after high voltage",
                     action="store_const", const="v")
